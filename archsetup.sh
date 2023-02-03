@@ -43,11 +43,21 @@ configuration() {
 }
 
 other() {
-	# yay
 	git clone https://aur.archlinux.org/yay-git.git $HOME/.config/yay
-	cd $HOME/.config/yay && makepkg -si --noconfirm
-	# brave
+	cd $HOME/.config/yay && makepkg -si --noconfirm && cd
 	yay -S brave-bin --noconfirm
-
+	rm /etc/tlp.conf
+	ln -s $HOME/tlp.conf /etc/
+	sudo systemctl enable tlp.service
+	rm /etc/vimrc
+	ln -s $HOME/.vimrc /etc/vimrc
+	mkdir $HOME/.config/zathura
+	ln -s $HOME/zathurarc $HOME/.config/zathura
 }
 
+packages_base
+packages_extra
+firewall
+dotfiles
+configuration
+other
