@@ -1,0 +1,226 @@
+[
+  {
+    "settings": {
+      "openEditInWindow": false,
+      "openEditInWindow.popup": false,
+      "windowPosition": {},
+      "show-badge": true,
+      "disableAll": false,
+      "exposeIframes": false,
+      "exposeStyleName": false,
+      "newStyleAsUsercss": false,
+      "styleViaXhr": false,
+      "patchCsp": false,
+      "config.autosave": true,
+      "schemeSwitcher.enabled": "system",
+      "schemeSwitcher.nightStart": "18:00",
+      "schemeSwitcher.nightEnd": "06:00",
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false,
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findSort": "u",
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": true,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.minColumnWidth": 750,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.publish.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "default",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "selector_separator_newline": true,
+        "newline_before_open_brace": false,
+        "newline_after_open_brace": true,
+        "newline_between_properties": true,
+        "newline_before_close_brace": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "end_with_newline": false,
+        "indent_conditional": true,
+        "indent_mozdoc": true
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": false,
+      "editor.selectByTokens": true,
+      "editor.appliesToLineWidget": true,
+      "editor.autosaveDraft": 10,
+      "editor.livePreview": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "none",
+      "iconset": -1,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "headerWidth.edit": 280,
+      "headerWidth.install": 280,
+      "headerWidth.manage": 280,
+      "popupWidth": 246,
+      "updateInterval": 24
+    },
+    "order": {
+      "main": [],
+      "prio": []
+    }
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://userstyles.world/api/style/1270.user.css",
+    "url": "https://userstyles.world/style/1270",
+    "installDate": 1646192535890,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           Stylus (Extension) - Dark Theme\n@namespace      queengooborg\n@author         Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]\n@description    A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and Firefox editions.  Colors are adjustable via the variables set on :root.\n@version        1.1.1\n@license        GPL-3.0\n==/UserStyle== */\n\n@-moz-document url-prefix(\"chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne\"), url-prefix(\"chrome-extension://kdinfijomkigjcjcbigolloleeiianaif\"), url-prefix(\"moz-extension://da931956-cdeb-254f-b488-aa1abf9bf94f\") {\n\n/* -=- Root Colors -=- */\n:root {\n    --background: #181818;\n    --background-2: #202020;\n    --background-3: #303030;\n    --foreground: #ccc;\n    --foreground-2: white;\n    --foreground-3: #bbb;\n    --foreground-black: black;\n    --main: #2f6f64;\n    --error: #ec0404;\n    --border: #505050;\n    --update-bg: #332e00;\n    --update-border: #4e4618;\n    --update-ready-bg: #003327;\n    --update-ready-border: #3f8d8b;\n}\n\n/* -=- Styling -=- */\n#header, #backup-buttons .dropdown-content a:hover {\n    color: var(--foreground) !important;\n    background: var(--background-2) !important;\n    border-style: none !important;\n}\n\ninput, #backup-buttons .dropdown-content, select {\n    background-color: var(--background) !important;\n    color: var(--foreground) !important;\n    border: 1px solid #000000 !important;\n}\n\n#installed::after {\n  background-color: var(--background) !important;\n}\n\nbutton {\n    background: var(--background-2) !important;\n    border: 4px solid var(--background-2) !important;\n    margin: 2px !important;\n    color: var(--foreground-2) !important;\n    border-radius: 5px !important;\n    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.82) !important;\n}\nbutton:hover {\n    background: var(--background) !important;\n    border: 4px solid var(--background) !important;\n    color: var(--foreground-2) !important;\n    border-radius: 5px !important;\n}\nbody {\n    color: var(--foreground-2) !important;\n    background: var(--background) !important;\n}\n\na, a:visited {\n    color: var(--foreground-2) !important;\n}\n\nselect {\n    width: 100px !important;\n}\n#save-button:after {\ncontent:'d' !important;\n}\n\nbody.dirty #save-button:after {\ncontent:'?' !important;\n}\n#message-box > div, #message-box-buttons, #message-box-title {\n    background-color: var(--background-2) !important;\n}\n.newUI .entry:nth-child(2n) {\n    background-color: var(--background) !important;\n}\n.svg-icon:hover, .newUI .entry:hover .svg-icon:hover, input[type=\"checkbox\"]:not(.slider):checked + .svg-icon.checked, .svg-icon.select-arrow {\n    fill: var(--foreground-2) !important;\n}\n#message-box.danger #message-box-title {\n    background-color: var(--error) !important;\n}\n.newUI .no-update:not(.update-problem):not(.update-done) .up-to-date, .newUI .can-update .update {\n    color: var(--foreground-white);\n}\n#help-popup {\n    background-color: var(--background) !important;\n}\n.CodeMirror {\n    -moz-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35) !important;\n    -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35) !important;\n    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35) !important;\n    background: var(--background-2) !important;\n    color: var(--foreground-3) !important;\n    line-height: 1.4em !important;\n    font-size: 13px !important;\n    height: 70%;\n    outline: transparent !important;\n    border: 1px solid var(--border) !important;\n}\n#hotkey-info div:first-child, #hotkey-info div, #hotkey-info[data-active] {\n    background-color: var(--background-2);\n    border: solid 2px var(--background-2);\n}\n#confirm>div, .menu-items-wrapper {\n    background-color: var(--background-2);\n    border: solid 2px rgba(0, 0, 0, 0.52);\n}\n#options {\n    background-color: var(--background-2);\n}\n\n#options-title {\n    background-color: var(--main);\n}\n\n#options-close-icon .svg-icon, .svg-icon, .svg-icon.info:hover, .svg-icon.settings:hover {\n    fill: var(--foreground);\n}\n    \n.newUI .updater-icons > :not(.check-update):after {\n    border-color: var(--update-border);\n    background-color: var(--update-bg);\n}\n\n.newUI .can-update:not([data-details$=\"locally edited\"]) .update:after {\n    border-color: var(--update-ready-border);\n    background-color: var(--update-ready-bg);\n}\n}",
+    "usercssData": {
+      "name": "Stylus (Extension) - Dark Theme",
+      "namespace": "queengooborg",
+      "author": "Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]",
+      "description": "A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and Firefox editions.  Colors are adjustable via the variables set on :root.",
+      "version": "1.1.1",
+      "license": "GPL-3.0"
+    },
+    "author": "Vinyl Da.i'gyu-Kazotetsu [https://queengoob.org]",
+    "description": "A dark theme for the Stylus extension, compatible with Chrome/Edge, Opera, and Firefox editions.  Colors are adjustable via the variables set on :root.",
+    "name": "Stylus (Extension) - Dark Theme",
+    "installationUrl": "https://userstyles.world/style/1270",
+    "originalDigest": "d74e54d329632af841bd2f1e27b11680177a48a0",
+    "_id": "19b240ba-e9c2-4fe3-937e-f150ca996f7c",
+    "_rev": 1675579184250,
+    "id": 24
+  },
+  {
+    "enabled": false,
+    "installDate": 1647071622813,
+    "name": "invert",
+    "sections": [
+      {
+        "code": ":root {\n  filter: invert(100%);\n}"
+      }
+    ],
+    "updateDate": 1647071622813,
+    "_id": "6511df77-eaca-42bd-854b-8f2f3e3a9fb5",
+    "_rev": 1675579084492,
+    "id": 54
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://cdn.jsdelivr.net/gh/33kk/uso-archive@flomaster/data/usercss/178018.user.css",
+    "url": "https://uso.kkx.one/style/178018",
+    "installDate": 1660987084439,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name           Google Colab Font in Windows\n@namespace      USO Archive\n@author         ztr\n@description    `CoLab seems to be using some fonts that are not installed on Windows 10 by default. I simply change them to the fonts that I preferred and are already installed. The CCS is simple, feel free to change.`\n@version        20191205.23.7\n@license        CC0-1.0\n@preprocessor   uso\n==/UserStyle== */\n@-moz-document url-prefix(\"https://colab.research.google.com/\") {\n/*For the regular markdown text*/\n.markdown {\n    font-family:candara;\n}\n\n/*For the code blocks in markdown*/\n.markdown :not(pre)>code {\n    font-family:\"YaHei Consolas Hybrid\", consolas;\n}\n\n/*For the editor*/\n.view-line, .line-numbers {\n    font-family:\"JetBrains Mono\";\n    font-weight: bold;\n    font-size:14px;\n    /*height:22px;*/\n}\n}",
+    "usercssData": {
+      "name": "Google Colab Font in Windows",
+      "namespace": "USO Archive",
+      "author": "ztr",
+      "description": "CoLab seems to be using some fonts that are not installed on Windows 10 by default. I simply change them to the fonts that I preferred and are already installed. The CCS is simple, feel free to change.",
+      "version": "20191205.23.7",
+      "license": "CC0-1.0",
+      "preprocessor": "uso"
+    },
+    "author": "ztr",
+    "description": "CoLab seems to be using some fonts that are not installed on Windows 10 by default. I simply change them to the fonts that I preferred and are already installed. The CCS is simple, feel free to change.",
+    "name": "Google Colab Font in Windows",
+    "originalDigest": "38ccc609c983b9533942d8a882f45b5fa7e9ba8a",
+    "_id": "89d75cd7-a20d-4552-bd4e-cd166760a1bd",
+    "_rev": 1675579020113,
+    "installationUrl": "https://uso.kkx.one/style/178018",
+    "id": 74,
+    "updateDate": 1660988599411,
+    "customName": "Google Colab Font"
+  },
+  {
+    "enabled": true,
+    "updateUrl": "https://userstyles.world/api/style/19.user.css",
+    "url": "https://github.com/StylishThemes/GitHub-Dark",
+    "installDate": 1675579218941,
+    "sections": [
+      {
+        "code": ""
+      }
+    ],
+    "sourceCode": "/* ==UserStyle==\n@name         GitHub Custom Fonts\n@namespace    StylishThemes\n@version      5.2.6\n@homepageURL  https://github.com/StylishThemes/GitHub-Dark\n@updateURL    https://userstyles.world/api/style/19.user.css\n@license      BSD-2-Clause\n@author       StylishThemes\n@preprocessor default\n@advanced text ghd-font-family \"Code font\" Menlo\n@advanced text ghd-font-feature-settings \"Code font feature Settings\" normal\n@advanced text ghd-font-size \"Code font size\" 12px\n==/UserStyle== */\n@-moz-document regexp(\"^https?://((education|gist|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\\\.)?github\\\\.com/((?!generated_pages/preview).)*$\"), regexp(\"^https?://www\\.zuora\\.com.*github\\.com.*\"), domain(\"githubusercontent.com\"), domain(\"www.githubstatus.com\"), domain(\"stylishthemes.github.io\") {\n  pre, code, tt, kbd:not(.badmono), samp, .blob-code, .file-data pre, .line-data,\n  #gist-form .file .input textarea, .blob-code-inner {\n    font-family: var(--ghd-font-family), Consolas, \"Liberation Mono\", Menlo, Courier, monospace !important;\n    font-feature-settings: var(--ghd-font-feature-settings) !important;\n    font-size: var(--ghd-font-size) !important;\n  }\n}\n",
+    "usercssData": {
+      "name": "GitHub Custom Fonts",
+      "namespace": "StylishThemes",
+      "version": "5.2.6",
+      "homepageURL": "https://github.com/StylishThemes/GitHub-Dark",
+      "updateURL": "https://userstyles.world/api/style/19.user.css",
+      "license": "BSD-2-Clause",
+      "author": "StylishThemes",
+      "preprocessor": "default",
+      "vars": {
+        "ghd-font-family": {
+          "type": "text",
+          "label": "Code font",
+          "name": "ghd-font-family",
+          "value": "JetBrains Mono",
+          "default": "Menlo",
+          "options": null
+        },
+        "ghd-font-feature-settings": {
+          "type": "text",
+          "label": "Code font feature Settings",
+          "name": "ghd-font-feature-settings",
+          "value": null,
+          "default": "normal",
+          "options": null
+        },
+        "ghd-font-size": {
+          "type": "text",
+          "label": "Code font size",
+          "name": "ghd-font-size",
+          "value": null,
+          "default": "12px",
+          "options": null
+        }
+      }
+    },
+    "author": "StylishThemes",
+    "name": "GitHub Custom Fonts",
+    "originalDigest": "c6c0c40ebf6545ff95ade508be57581f2382650d",
+    "_id": "4fddf8d7-4369-4483-9ab1-be85e5eac097",
+    "_rev": 1675579242273,
+    "installationUrl": "https://userstyles.world/style/19",
+    "id": 75
+  }
+]
