@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# archsetup
+# archsetupd
 
 packages_base() {
 	sudo pacman -S --noconfirm \
