@@ -4,14 +4,14 @@
 
 packages_base() {
 	sudo pacman -S --noconfirm \
-		base-devel linux-headers linux-firmware ufw python-pip brightnessctl code gvim solaar \
+		base-devel linux-headers linux-firmware ufw tlp brightnessctl coreutils alsa-utils pulseaudio \
 		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
-		coreutils alsa-utils pulseaudio bashtop ttf-jetbrains-mono man-db man-pages git github-cli tlp
+		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg code gvim solaar unzip
 }
 
 packages_extra() {
 	sudo pacman -S --noconfirm \
-		gnupg pass passmenu zathura zathura-pdf-mupdf nodejs npm gimp inkscape texlive-most freecad
+		nodejs npm gimp inkscape freecad texlive-most zathura zathura-pdf-mupdf
 }
 
 firewall() {
