@@ -25,10 +25,9 @@ firewall() {
 
 dotfiles() {
 	git clone --bare https://github.com/mathbike/.dotfiles.git $HOME/.dotfiles
-    alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    config checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} rm {}
-    config checkout
-	config config --local status.showUntrackedFiles no
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} rm {}
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME --local status.showUntrackedFiles no
 }
 
 configuration() {
