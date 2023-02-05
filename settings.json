@@ -1,0 +1,23 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Default Dark+",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
+    "update.mode": "start",
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "editor.inlineSuggest.enabled": true,
+    "telemetry.telemetryLevel": "off", /* crash for copilot */
+    "git.confirmSync": false,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "files.exclude": {
+        "**/.git": false
+    }
+}

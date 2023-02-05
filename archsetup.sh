@@ -49,6 +49,8 @@ other() {
 	yay -S brave-bin --noconfirm
 	rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
 	rm /etc/vimrc && ln -s $HOME/.vimrc /etc/vimrc
+	mv $HOME/archsetup/settings.json $HOME/.config/"Code - OSS"/User/settings.json
+	code --install-extension ms-python.python
 }
 
 packages_base
