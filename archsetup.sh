@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# archsetupd
+# archsetup
 
 packages_base() {
 	sudo pacman -S --noconfirm \
@@ -12,6 +12,7 @@ packages_base() {
 packages_extra() {
 	sudo pacman -S --noconfirm \
 		nodejs npm gimp inkscape freecad texlive-most zathura zathura-pdf-mupdf
+	mkdir $HOME/.config/zathura && ln -s $HOME/zathurarc $HOME/.config/zathura
 }
 
 firewall() {
@@ -48,7 +49,6 @@ other() {
 	yay -S brave-bin --noconfirm
 	rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
 	rm /etc/vimrc && ln -s $HOME/.vimrc /etc/vimrc
-	mkdir $HOME/.config/zathura && ln -s $HOME/zathurarc $HOME/.config/zathura
 }
 
 packages_base
