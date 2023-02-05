@@ -10,3 +10,9 @@ openrazer() {
 
 # npm live server
 sudo npm install -g live-server
+
+git clone --bare https://github.com/mathbike/.dotfiles.git $PWD/.dotfiles
+/usr/bin/git --git-dir=$PWD/.dotfiles/ --work-tree=$PWD checkout 2>&1 | grep -E "\s+\." | awk {'print $1'} | xargs -I{} rm {}
+/usr/bin/git --git-dir=$PWD/.dotfiles/ --work-tree=$PWD checkout
+/usr/bin/git --git-dir=$PWD/.dotfiles/ --work-tree=$PWD /usr/bin/git --git-dir=$PWD/.dotfiles/ --work-tree=$PWD --local status.showUntrackedFiles no
+
