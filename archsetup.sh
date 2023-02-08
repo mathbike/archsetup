@@ -48,18 +48,18 @@ other() {
 	git clone https://aur.archlinux.org/yay-git.git $HOME/.config/yay
 	cd $HOME/.config/yay && makepkg -si --noconfirm && cd
 	yay -S brave-bin --noconfirm
-	rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
-	rm /etc/vimrc && ln -s $HOME/.vimrc /etc/vimrc
-	mv $HOME/archsetup/settings.json $HOME/.config/"Code - OSS"/User/settings.json
+	sudo rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
+	sudo rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
+	cp $HOME/archsetup/settings.json $HOME/.config/"Code - OSS"/User/
 	code --install-extension ms-python.python
 	code --install-extension GitHub.vscode-pull-request-github
 	code --install-extension PKief.material-icon-theme
 	code --install-extension ritwickdey.LiveServer
 }
 
-packages_base
-packages_extra
-firewall
-dotfiles
-configuration
-other
+#packages_base
+#packages_extra
+#firewall
+#dotfiles
+#configuration
+#other
