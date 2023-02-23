@@ -6,7 +6,7 @@ packages_base() {
 	sudo pacman -S --noconfirm \
 		base-devel linux-headers linux-firmware ufw tlp brightnessctl coreutils alsa-utils pulseaudio \
 		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
-		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg code gvim solaar unzip keepassxc
+		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg code gvim solaar zip unzip keepassxc
 }
 
 packages_extra() {
