@@ -6,7 +6,7 @@ packages_base() {
 	sudo pacman -S --noconfirm \
 		base-devel linux-headers linux-firmware ufw tlp brightnessctl coreutils alsa-utils pulseaudio \
 		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
-		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg code gvim solaar zip unzip keepassxc
+		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg gvim solaar zip unzip keepassxc
 }
 
 packages_extra() {
@@ -50,11 +50,13 @@ other() {
 	yay -S brave-bin --noconfirm
 	sudo rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
 	sudo rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
-	cp $HOME/archsetup/settings.json $HOME/.config/"Code - OSS"/User/
-	code --install-extension ms-python.python
-	code --install-extension GitHub.vscode-pull-request-github
-	code --install-extension PKief.material-icon-theme
-	code --install-extension ritwickdey.LiveServer
+	# codium
+	yay -S vscodium --noconfirm
+	cp $HOME/archsetup/settings.json $HOME/.config/VSCodium/User/
+	codium --install-extension ms-python.python
+	codium --install-extension GitHub.vscode-pull-request-github
+	codium --install-extension PKief.material-icon-theme
+	codium --install-extension ritwickdey.LiveServer
 }
 
 #packages_base
