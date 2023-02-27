@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# archsetup
+pacman() {
+	pacman -S --needed - < pkglist.txt
+}
 
 packages_base() {
 	sudo pacman -S --noconfirm \
