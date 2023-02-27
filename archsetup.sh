@@ -50,7 +50,9 @@ other() {
 	yay -S brave-bin --noconfirm
 	sudo rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
 	sudo rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
-	# codium
+}
+
+vscodium() {
 	yay -S vscodium --noconfirm
 	cp $HOME/archsetup/settings.json $HOME/.config/VSCodium/User/
 	codium --install-extension ms-python.python
@@ -65,3 +67,4 @@ other() {
 #dotfiles
 #configuration
 #other
+#vscodium
