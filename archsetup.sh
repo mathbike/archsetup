@@ -61,6 +61,7 @@ vscodium() {
 	codium --install-extension GitHub.vscode-pull-request-github
 	codium --install-extension PKief.material-icon-theme
 	codium --install-extension ritwickdey.LiveServer
+	codium --install-extension James-Yu.latex-workshop
 }
 
 #packages_base
