@@ -62,6 +62,7 @@ vscodium() {
 	codium --install-extension PKief.material-icon-theme
 	codium --install-extension ritwickdey.LiveServer
 	codium --install-extension James-Yu.latex-workshop
+	codium --install-extension alexcvzz.vscode-sqlite
 }
 
 #packages_base
