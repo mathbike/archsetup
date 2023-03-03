@@ -7,7 +7,7 @@ pacman() {
 packages_base() {
 	pacman -S --noconfirm \
 		base-devel linux-headers linux-firmware brightnessctl coreutils alsa-utils pulseaudio \
-		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
+		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput \
 		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg solaar zip unzip keepassxc
 }
 

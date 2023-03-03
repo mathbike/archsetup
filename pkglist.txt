@@ -4,12 +4,17 @@ base-devel
 bashtop
 brave-bin
 brightnessctl
+dosfstools
 efibootmgr
+firefox
 flameshot
+flashrom
 freecad
+gcc-ada
 gimp
 git
 github-cli
+gptfdisk
 gvim
 inkscape
 intel-ucode
@@ -28,6 +33,7 @@ nano
 nodejs
 npm
 pacman-contrib
+pcmanfm
 pulseaudio
 python-pip
 rsync
@@ -50,10 +56,10 @@ tlp
 ttf-jetbrains-mono
 ufw
 unzip
+ventoy-bin
 vscodium
 xbindkeys
 xclip
-xdotool
 xf86-video-nouveau
 xorg-server
 xorg-xinit
