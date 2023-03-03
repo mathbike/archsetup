@@ -41,4 +41,5 @@ with open(mdpath, 'w') as file:
 
 # push to github
 os.chdir(target_directory)
-os.system('git add .;git commit -m '+commit_message+';git push')
+#os.system('git log')
+os.system('git add 2022-10-01-arch_install.md;git commit -m '+commit_message+';git push')
