@@ -35,10 +35,9 @@ mdlist = mdlist[0:i2+2] + mdlist[i3:]
 mdlist[i2+1] = script+'\n'
 
 # write updated markdown file
-f = open(mdpath, "w")
-for i in mdlist:
-    f.write(i)
-f.close()
+with open(mdpath, 'w') as file:
+    for i in mdlist:
+        file.write(i)
 
 # push to github
 os.chdir(target_directory)
