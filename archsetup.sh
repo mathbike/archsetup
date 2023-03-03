@@ -6,18 +6,18 @@ pacman() {
 
 packages_base() {
 	pacman -S --noconfirm \
-		base-devel linux-headers linux-firmware ufw tlp brightnessctl coreutils alsa-utils pulseaudio \
+		base-devel linux-headers linux-firmware brightnessctl coreutils alsa-utils pulseaudio \
 		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
-		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg gvim solaar zip unzip keepassxc
+		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg solaar zip unzip keepassxc
 }
 
 packages_extra() {
 	pacman -S --noconfirm \
-		nodejs npm gimp inkscape freecad texlive-most zathura zathura-pdf-mupdf
-	mkdir -p $HOME/.config/zathura && ln -s $HOME/zathurarc $HOME/.config/zathura
+		nodejs npm gimp inkscape freecad texlive-most
 }
 
-firewall() {
+ufw() {
+	pacman -S ufw --noconfirm
 	systemctl enable ufw.service
 	ufw default deny incoming
 	ufw default allow outgoing
@@ -34,7 +34,7 @@ dotfiles() {
 	echo "	showUntrackedFiles = no" >> $HOME/.dotfiles/config
 }
 
-configuration() {
+suckless() {
 	git clone https://github.com/mathbike/suckless.git $HOME/.config/suckless
 	cd $HOME/.config/suckless/st && make install
 	cd $HOME/.config/suckless/dwm && make install
@@ -46,12 +46,34 @@ configuration() {
 	ln -s $HOME/.config/suckless/dwm/dwmstatusbar/sb-volume.sh /usr/local/bin
 }
 
-other() {
+yay() {
 	git clone https://aur.archlinux.org/yay-git.git $HOME/.config/yay
-	cd $HOME/.config/yay && makepkg -si --noconfirm && cd
+	cd $HOME/.config/yay
+	makepkg -si --noconfirm
+	cd
+}
+
+brave() {
 	yay -S brave-bin --noconfirm
-	rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && systemctl enable tlp.service
-	rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
+}
+
+gvim() {
+	pacman -S gvim --noconfirm
+	rm /etc/vimrc
+	ln -s $HOME/.vimrc /etc/
+}
+
+tlp() {
+	pacman -S tlp --noconfirm
+	rm /etc/tlp.conf
+	ln -s $HOME/tlp.conf /etc/
+	systemctl enable tlp.service
+}
+
+zathura() {
+	pacman -S zathura zathura-pdf-mupdf --noconfirm
+	mkdir -p $HOME/.config/zathura
+	ln -s $HOME/zathurarc $HOME/.config/zathura
 }
 
 vscodium() {
@@ -68,8 +90,12 @@ vscodium() {
 pacman
 packages_base
 packages_extra
-firewall
+ufw
 dotfiles
-configuration
-other
+suckless
+yay
+brave
+gvim
+tlp
+zathura
 vscodium
