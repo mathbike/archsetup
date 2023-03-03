@@ -5,14 +5,14 @@ pacman() {
 }
 
 packages_base() {
-	sudo pacman -S --noconfirm \
+	pacman -S --noconfirm \
 		base-devel linux-headers linux-firmware ufw tlp brightnessctl coreutils alsa-utils pulseaudio \
 		xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libxft libxinerama xclip xorg-xinput xdotool \
 		python-pip bashtop ttf-jetbrains-mono man-db man-pages git github-cli gnupg gvim solaar zip unzip keepassxc
 }
 
 packages_extra() {
-	sudo pacman -S --noconfirm \
+	pacman -S --noconfirm \
 		nodejs npm gimp inkscape freecad texlive-most zathura zathura-pdf-mupdf
 	mkdir -p $HOME/.config/zathura && ln -s $HOME/zathurarc $HOME/.config/zathura
 }
