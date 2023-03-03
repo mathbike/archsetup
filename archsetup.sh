@@ -65,6 +65,7 @@ vscodium() {
 	codium --install-extension alexcvzz.vscode-sqlite
 }
 
+pacman
 packages_base
 packages_extra
 firewall

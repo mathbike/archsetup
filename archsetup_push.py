@@ -5,7 +5,7 @@ scriptpath = 'archsetup.sh'
 target_directory = '/home/mike/mathbike.github.io/_posts/'
 markdown_file_path = target_directory + '2022-10-01-arch_install.md'
 
-commit_message = 'save' # cannot be multiple words
+commit_message = 'update archsetup.sh'
 # get scriptpath file extension
 extension = scriptpath.split(".")[1]
 
@@ -42,4 +42,4 @@ with open(markdown_file_path, 'w') as file:
 
 # push to git upsteam
 os.chdir(target_directory)
-os.system('git add .;git commit -m '+commit_message+';git push')
+os.system('git add .;git commit -m \''+commit_message+'\';git push')
