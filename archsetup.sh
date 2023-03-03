@@ -87,6 +87,11 @@ vscodium() {
 	codium --install-extension alexcvzz.vscode-sqlite
 }
 
+tor() {
+	pacman -S tor torbrowser-launcher --noconfirm
+	systemctl enable tor.service
+}
+
 pacman
 packages_base
 packages_extra
@@ -99,3 +104,4 @@ gvim
 tlp
 zathura
 vscodium
+tor
