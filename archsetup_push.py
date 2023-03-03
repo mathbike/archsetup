@@ -1,10 +1,11 @@
 import os
 
-# variables
+# variables to change
 scriptpath = 'archsetup.sh'
 target_directory = '/home/mike/mathbike.github.io/_posts/'
-mdpath = target_directory + '2022-10-01-arch_install.md'
-commit_message = 'updated archsetup.sh'
+markdown_file_path = target_directory + '2022-10-01-arch_install.md'
+
+commit_message = 'save' # cannot be multiple words
 # get scriptpath file extension
 extension = scriptpath.split(".")[1]
 
@@ -13,7 +14,7 @@ with open(scriptpath, 'r') as file:
     script = file.read().rstrip()
 
 # load each line of markdown file into memory as list called mdlist
-with open(mdpath, 'r') as file:
+with open(markdown_file_path, 'r') as file:
     mdlist = file.readlines()
 
 # search mdlist for index matching scriptpath
@@ -35,11 +36,10 @@ mdlist = mdlist[0:i2+2] + mdlist[i3:]
 mdlist[i2+1] = script+'\n'
 
 # write updated markdown file
-with open(mdpath, 'w') as file:
+with open(markdown_file_path, 'w') as file:
     for i in mdlist:
         file.write(i)
 
-# push to github
+# push to git upsteam
 os.chdir(target_directory)
-#os.system('git log')
-os.system('git add 2022-10-01-arch_install.md;git commit -m '+commit_message+';git push')
+os.system('git add .;git commit -m '+commit_message+';git push')

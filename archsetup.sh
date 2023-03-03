@@ -20,9 +20,9 @@ packages_extra() {
 firewall() {
 	systemctl enable ufw.service
 	ufw default deny incoming
-	sudo ufw default allow outgoing
-	sudo ufw logging off
-	sudo ufw enable
+	ufw default allow outgoing
+	ufw logging off
+	ufw enable
 }
 
 dotfiles() {
@@ -36,10 +36,10 @@ dotfiles() {
 
 configuration() {
 	git clone https://github.com/mathbike/suckless.git $HOME/.config/suckless
-	cd $HOME/.config/suckless/st && sudo make install
-	cd $HOME/.config/suckless/dwm && sudo make install
-	cd $HOME/.config/suckless/dwm/dwmblocks && sudo make install
-	cd $HOME/.config/suckless/dmenu && sudo make install && cd
+	cd $HOME/.config/suckless/st && make install
+	cd $HOME/.config/suckless/dwm && make install
+	cd $HOME/.config/suckless/dwm/dwmblocks && make install
+	cd $HOME/.config/suckless/dmenu && make install && cd
 	ln -s $HOME/.config/suckless/dwm/dwmstatusbar/sb-battery.sh /usr/local/bin
 	ln -s $HOME/.config/suckless/dwm/dwmstatusbar/sb-brightness.sh /usr/local/bin
 	ln -s $HOME/.config/suckless/dwm/dwmstatusbar/sb-date.sh /usr/local/bin
@@ -50,8 +50,8 @@ other() {
 	git clone https://aur.archlinux.org/yay-git.git $HOME/.config/yay
 	cd $HOME/.config/yay && makepkg -si --noconfirm && cd
 	yay -S brave-bin --noconfirm
-	sudo rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && sudo systemctl enable tlp.service
-	sudo rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
+	rm /etc/tlp.conf && ln -s $HOME/tlp.conf /etc/ && systemctl enable tlp.service
+	rm /etc/vimrc && ln -s $HOME/.vimrc /etc/
 }
 
 vscodium() {
@@ -65,10 +65,10 @@ vscodium() {
 	codium --install-extension alexcvzz.vscode-sqlite
 }
 
-#packages_base
-#packages_extra
-#firewall
-#dotfiles
-#configuration
-#other
-#vscodium
+packages_base
+packages_extra
+firewall
+dotfiles
+configuration
+other
+vscodium
