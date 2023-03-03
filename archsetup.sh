@@ -85,6 +85,7 @@ vscodium() {
 	codium --install-extension ritwickdey.LiveServer
 	codium --install-extension James-Yu.latex-workshop
 	codium --install-extension alexcvzz.vscode-sqlite
+	codium --install-extension bierner.markdown-mermaid
 }
 
 tor() {
